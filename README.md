@@ -7,6 +7,7 @@
 [![TypeScript Strict](https://img.shields.io/badge/TypeScript-Strict%20Mode-0284C7?style=for-the-badge)](https://github.com)
 [![Design](https://img.shields.io/badge/Design-High--Precision%20Light%20Theme-slate?style=for-the-badge)](https://github.com)
 
+LIVE DEMO: voltsureev.netlify.app
 ---
 
 ## 1. Problem Statement & The "Dashboard Illusion"
@@ -35,8 +36,8 @@ In reality, an unmodelled +320m uphill grade, 33°C thermal derating, stop-start
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/voltsure-ai.git
-cd voltsure-ai
+git clone https://github.com/amrithavarshini-03/VoltSure.git
+cd VoltSure
 
 # Install dependencies
 npm install
