@@ -7,7 +7,7 @@
 [![TypeScript Strict](https://img.shields.io/badge/TypeScript-Strict%20Mode-0284C7?style=for-the-badge)](https://github.com)
 [![Design](https://img.shields.io/badge/Design-High--Precision%20Light%20Theme-slate?style=for-the-badge)](https://github.com)
 
-LIVE DEMO: voltsureev.netlify.app
+LIVE DEMO: [Visit GitHub](voltsureev.netlify.app)
 ---
 
 ## 1. Problem Statement & The "Dashboard Illusion"
