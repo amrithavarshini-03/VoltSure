@@ -318,15 +318,15 @@ export const OnboardingLogin: React.FC<OnboardingLoginProps> = ({ onSuccess }) =
             />
 
             {/* Quick SoC chips */}
-            <div className="flex items-center justify-between pt-1">
+            <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
               <span className="text-[10px] font-mono text-slate-400 uppercase">Presets:</span>
-              <div className="flex gap-1.5">
+              <div className="flex flex-wrap gap-1.5">
                 {socPresets.map((val) => (
                   <button
                     key={val}
                     type="button"
                     onClick={() => setStartingSoC(val)}
-                    className={`px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold transition ${
+                    className={`px-2 sm:px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold transition ${
                       startingSoC === val
                         ? 'bg-lime-600 text-white shadow-xs'
                         : 'bg-white border border-slate-200 text-slate-700 hover:border-slate-300'
@@ -340,18 +340,18 @@ export const OnboardingLogin: React.FC<OnboardingLoginProps> = ({ onSuccess }) =
           </div>
 
           {/* Connected Vehicle Live Twin Specs */}
-          <div className="grid grid-cols-3 gap-2.5 text-center font-mono text-xs">
-            <div className="p-2.5 rounded-xl bg-white border border-slate-200">
-              <span className="text-[10px] text-slate-400 uppercase block">Pack Capacity</span>
-              <span className="font-bold text-slate-800">{selectedVehicle.claimedCapacityKWh} kWh</span>
+          <div className="grid grid-cols-3 gap-2 sm:gap-2.5 text-center font-mono text-xs">
+            <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-slate-200">
+              <span className="text-[8px] sm:text-[10px] text-slate-400 uppercase block">Pack Capacity</span>
+              <span className="font-bold text-slate-800 text-xs sm:text-sm">{selectedVehicle.claimedCapacityKWh} kWh</span>
             </div>
-            <div className="p-2.5 rounded-xl bg-white border border-slate-200">
-              <span className="text-[10px] text-slate-400 uppercase block">Curb Mass</span>
-              <span className="font-bold text-slate-800">{selectedVehicle.massKg} kg</span>
+            <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-slate-200">
+              <span className="text-[8px] sm:text-[10px] text-slate-400 uppercase block">Curb Mass</span>
+              <span className="font-bold text-slate-800 text-xs sm:text-sm">{selectedVehicle.massKg} kg</span>
             </div>
-            <div className="p-2.5 rounded-xl bg-white border border-slate-200">
-              <span className="text-[10px] text-slate-400 uppercase block">Reserve Buffer</span>
-              <span className="font-bold text-emerald-700">10% Locked</span>
+            <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-slate-200">
+              <span className="text-[8px] sm:text-[10px] text-slate-400 uppercase block">Reserve Buffer</span>
+              <span className="font-bold text-emerald-700 text-xs sm:text-sm">10% Locked</span>
             </div>
           </div>
 

@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "test": "vitest run",
-    "pack": "powershell -Command \"Compress-Archive -Path (Get-ChildItem -Exclude 'node_modules','.git','*.zip','.env') -DestinationPath voltsure-ai-submission.zip -Force\"",
+    "pack": "powershell -Command \"Compress-Archive -Path (Get-ChildItem | Where-Object { $_.Name -notmatch '^(node_modules|\\.git|\\.env|.*\\.zip)$' }) -DestinationPath voltsure-ai-submission.zip -Force\"",
     "lint": "oxlint",
     "preview": "vite preview"
   },

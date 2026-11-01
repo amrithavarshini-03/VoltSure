@@ -22,12 +22,14 @@ export const TruthModeToggle: React.FC = () => {
       {truthMode ? (
         <>
           <ShieldCheck className="w-3.5 h-3.5 text-sky-200" />
-          <span className="font-semibold">Truth Mode ON</span>
+          <span className="font-semibold hidden sm:inline">Truth Mode ON</span>
+          <span className="font-semibold sm:hidden">Truth</span>
         </>
       ) : (
         <>
           <ShieldAlert className="w-3.5 h-3.5 text-slate-400" />
-          <span>Truth Mode</span>
+          <span className="hidden sm:inline">Truth Mode</span>
+          <span className="sm:hidden">Truth</span>
         </>
       )}
     </button>

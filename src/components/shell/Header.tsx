@@ -63,11 +63,12 @@ export const Header: React.FC = () => {
             {/* AI Copilot Button */}
             <button
               onClick={() => setCopilotModalOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-lime-500 to-emerald-500 hover:from-lime-400 hover:to-emerald-400 text-slate-950 text-xs font-bold font-mono shadow-xs transition"
+              className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-gradient-to-r from-lime-500 to-emerald-500 hover:from-lime-400 hover:to-emerald-400 text-slate-950 text-xs font-bold font-mono shadow-xs transition"
               title="Open VoltSure AI Route Copilot"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">AI Copilot</span>
+              <span className="sm:hidden font-mono font-bold text-[11px]">AI</span>
             </button>
 
             {/* Simulated Data Badge */}

@@ -108,9 +108,9 @@ export const RouteMap: React.FC<RouteMapProps> = ({
 
   return (
     <div className={`relative w-full ${heightClass} rounded-2xl overflow-hidden border border-slate-200 shadow-card bg-slate-50 z-0`}>
-      {/* Floating Map Legend */}
-      <div className="absolute top-3 right-3 z-[400] bg-white/95 backdrop-blur-sm p-3 rounded-xl border border-slate-200/90 shadow-md text-xs font-mono space-y-1.5 select-none pointer-events-auto">
-        <div className="font-semibold text-slate-900 text-[11px] uppercase tracking-wider mb-1 font-sans">
+      {/* Floating Map Legend (Adaptive: full on desktop/laptop, compact chip on mobile) */}
+      <div className="hidden sm:block absolute top-3 right-3 z-[400] bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-xl border border-slate-200/90 shadow-md text-[10px] sm:text-xs font-mono space-y-1 sm:space-y-1.5 select-none pointer-events-auto">
+        <div className="font-semibold text-slate-900 text-[10px] sm:text-[11px] uppercase tracking-wider mb-1 font-sans">
           Route Reliability Layer
         </div>
         <div className="flex items-center gap-2">
@@ -131,6 +131,12 @@ export const RouteMap: React.FC<RouteMapProps> = ({
             <span>Replan Active</span>
           </div>
         )}
+      </div>
+
+      {/* Mobile-only compact pill */}
+      <div className="sm:hidden absolute top-2 right-2 z-[400] bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg border border-slate-200 shadow-xs text-[9px] font-mono flex items-center gap-1.5 pointer-events-auto">
+        <span className="w-2 h-2 rounded-full bg-lime-600" />
+        <span className="text-slate-800 font-bold">Route Map</span>
       </div>
 
       <MapContainer

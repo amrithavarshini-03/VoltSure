@@ -367,13 +367,13 @@ export const DashboardPlanner: React.FC = () => {
         </div>
 
         {/* Calculate Button */}
-        <div className="flex items-center justify-between pt-2">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
           <span className="text-[11px] font-mono text-slate-400">
             Press Enter or click to update physics tractive force calculations
           </span>
           <button
             onClick={() => handleApplyLocations()}
-            className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-mono font-bold transition shadow-xs flex items-center gap-2 hover:scale-105"
+            className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-mono font-bold transition shadow-xs flex items-center justify-center gap-2 hover:scale-105"
           >
             <RotateCw className="w-3.5 h-3.5 text-lime-400" />
             <span>Recalculate Route & Feasibility</span>
@@ -473,23 +473,23 @@ export const DashboardPlanner: React.FC = () => {
           </div>
 
           {/* Segment Speed Breakdown */}
-          <div className="flex items-center gap-2 text-xs font-mono text-slate-600">
-            <div className="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-center">
-              <span className="text-[9px] text-slate-400 block uppercase">City Corridor</span>
-              <strong className="text-slate-900">
+          <div className="grid grid-cols-3 gap-2 w-full md:w-auto text-xs font-mono text-slate-600">
+            <div className="px-2 sm:px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-center">
+              <span className="text-[8px] sm:text-[9px] text-slate-400 block uppercase">City Corridor</span>
+              <strong className="text-slate-900 text-xs sm:text-sm">
                 {scenarioInputs.trafficLevel === 'heavy' ? '22 km/h' : scenarioInputs.trafficLevel === 'moderate' ? '36 km/h' : '48 km/h'}
               </strong>
             </div>
-            <div className="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-center">
-              <span className="text-[9px] text-slate-400 block uppercase">Arterial Bypass</span>
-              <strong className="text-slate-900">
+            <div className="px-2 sm:px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-center">
+              <span className="text-[8px] sm:text-[9px] text-slate-400 block uppercase">Arterial Bypass</span>
+              <strong className="text-slate-900 text-xs sm:text-sm">
                 {scenarioInputs.trafficLevel === 'heavy' ? '38 km/h' : scenarioInputs.trafficLevel === 'moderate' ? '46 km/h' : '54 km/h'}
               </strong>
             </div>
-            <div className="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-center">
-              <span className="text-[9px] text-slate-400 block uppercase">Thermal Idle Penalty</span>
-              <strong className="text-amber-700">
-                {scenarioInputs.trafficLevel === 'heavy' ? '+28% Wh' : scenarioInputs.trafficLevel === 'moderate' ? '+12% Wh' : '0% (Nominal)'}
+            <div className="px-2 sm:px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-center">
+              <span className="text-[8px] sm:text-[9px] text-slate-400 block uppercase">Idle Penalty</span>
+              <strong className="text-amber-700 text-xs sm:text-sm">
+                {scenarioInputs.trafficLevel === 'heavy' ? '+28% Wh' : scenarioInputs.trafficLevel === 'moderate' ? '+12% Wh' : '0% (Nom)'}
               </strong>
             </div>
           </div>

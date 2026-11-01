@@ -203,11 +203,10 @@ interface RouteCompareResponse {
               <button
                 key={api.id}
                 onClick={() => setSelectedApi(api.id)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition ${
-                  selectedApi === api.id
-                    ? 'bg-slate-900 text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
+                className={`px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition ${selectedApi === api.id
+                  ? 'bg-slate-900 text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}
               >
                 {api.endpoint.split(' ')[1]}
               </button>

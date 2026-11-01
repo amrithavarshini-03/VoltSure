@@ -13,17 +13,18 @@ import {
 interface NavItem {
   to: string;
   label: string;
+  shortLabel: string;
   sublabel: string;
   icon: React.ComponentType<{ className?: string }>;
   badge?: string;
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { to: '/', label: 'Plan & My EV', sublabel: 'Vehicle Sync & Destination', icon: Compass },
-  { to: '/proof', label: 'Feasibility Proof', sublabel: 'Will I Make It? Verdict', icon: Zap, badge: 'Core' },
-  { to: '/drive', label: 'Live Drive HUD', sublabel: 'In-Flight Simulation & Replan', icon: Navigation, badge: 'Live' },
-  { to: '/chargers', label: 'Charger Trust', sublabel: 'Bayesian Decay & Status Age', icon: BatteryCharging },
-  { to: '/evidence', label: 'Model Evidence', sublabel: '120-Trip Synthetic Benchmark', icon: BarChart3 },
+  { to: '/', label: 'Plan & My EV', shortLabel: 'Plan', sublabel: 'Vehicle Sync & Destination', icon: Compass },
+  { to: '/proof', label: 'Feasibility Proof', shortLabel: 'Proof', sublabel: 'Will I Make It? Verdict', icon: Zap, badge: 'Core' },
+  { to: '/drive', label: 'Live Drive HUD', shortLabel: 'Drive', sublabel: 'In-Flight Simulation & Replan', icon: Navigation, badge: 'Live' },
+  { to: '/chargers', label: 'Charger Trust', shortLabel: 'Chargers', sublabel: 'Bayesian Decay & Status Age', icon: BatteryCharging },
+  { to: '/evidence', label: 'Model Evidence', shortLabel: 'Evidence', sublabel: '120-Trip Synthetic Benchmark', icon: BarChart3 },
 ];
 
 export const NavigationRail: React.FC = () => {
@@ -107,7 +108,7 @@ export const NavigationRail: React.FC = () => {
               }
             >
               <Icon className="w-4 h-4" />
-              <span>{item.label.split(' ')[0]}</span>
+              <span>{item.shortLabel}</span>
             </NavLink>
           );
         })}

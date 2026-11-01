@@ -6,7 +6,16 @@ import { BoltIcon } from '../common/BoltIcon';
 import { ProvenanceChip } from '../common/ProvenanceChip';
 
 export const ProofCertificateModal: React.FC = () => {
-  const { proofCertificateOpen, setProofCertificateOpen, getVehicle, getRoutePlan, selectedRouteId, scenarioInputs } = useVoltSureStore();
+  const {
+    proofCertificateOpen,
+    setProofCertificateOpen,
+    getVehicle,
+    getRoutePlan,
+    selectedRouteId,
+    scenarioInputs,
+    customOriginText,
+    customDestinationText,
+  } = useVoltSureStore();
   const [copied, setCopied] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const certRef = useRef<HTMLDivElement>(null);
@@ -21,7 +30,7 @@ export const ProofCertificateModal: React.FC = () => {
   const handleCopy = () => {
     const text = `
 === VOLTSURE AI JOURNEY PROOF CERTIFICATE ===
-Trip: Gandhipuram to Anaikatti Foothills (35-42 km)
+Trip: ${customOriginText.split(',')[0]} to ${customDestinationText.split(',')[0]} (${activeRoute.totalDistanceKm} km)
 Vehicle: ${vehicle.name} (${vehicle.variant})
 Initial SoC: ${scenarioInputs.startingSoC}% | Protected Reserve: ${scenarioInputs.reservePercent}%
 Estimated Feasibility: ${(activeRoute.pFeasibleArrival * 100).toFixed(1)}% (Confidence Target: ${scenarioInputs.confidenceTarget}%)
@@ -108,7 +117,7 @@ Notice: Estimated probability of arriving with reserve intact, under stated data
             <div className="grid grid-cols-2 gap-4 text-xs font-sans mb-4">
               <div>
                 <span className="text-slate-500 text-[10px] uppercase font-mono block">Origin & Destination</span>
-                <p className="font-bold text-slate-900 text-sm">Gandhipuram → Anaikatti</p>
+                <p className="font-bold text-slate-900 text-sm">{customOriginText.split(',')[0]} → {customDestinationText.split(',')[0]}</p>
                 <p className="text-slate-600 font-mono">{activeRoute.totalDistanceKm} km • {activeRoute.durationMinutes} mins</p>
               </div>
               <div>

@@ -15,6 +15,9 @@ dist-ssr
 .env.*
 !.env.example
 
+# Netlify zip
+voltsure-netlify-dist.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
