@@ -2,17 +2,10 @@
 
 > **"Don't just predict the range. Prove the journey is feasible."**
 
-[![Built for HackFront India](https://img.shields.io/badge/HackFront%20India-Problem%20Statement%20T6.1-84CC16?style=for-the-badge)](https://github.com)
-[![Engine Tests](https://img.shields.io/badge/Vitest-6%2F6%20Passing-emerald?style=for-the-badge)](https://github.com)
-[![TypeScript Strict](https://img.shields.io/badge/TypeScript-Strict%20Mode-0284C7?style=for-the-badge)](https://github.com)
-[![Design](https://img.shields.io/badge/Design-High--Precision%20Light%20Theme-slate?style=for-the-badge)](https://github.com)
 
 LIVE DEMO: [VoltSure AI](https://voltsureev.netlify.app)
 ---
 
-## 1. Problem Statement & The "Dashboard Illusion"
-
-**HackFront India — Problem Statement T6.1: "Will I Make It"**
 
 Standard electric vehicle dashboards rely on naive **Distance-To-Empty (DTE)** calculations. By dividing remaining battery state of charge by a fixed nominal Wh/km rating, an instrument cluster displays misleading estimates like *"84 km remaining"*, giving riders false confidence for a 35 km journey.
 
@@ -119,6 +112,3 @@ Trust_Score                = round(100 * lower_confidence_bound(P_usable_net))
 
 ---
 
-## 8. Built for HackFront India
-
-Engineered with precision for **HackFront India 2026** by the VoltSure mobility engineering team.
